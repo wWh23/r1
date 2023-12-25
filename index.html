@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>首页</title>
+		<meta charset="utf-8">
+		<link rel="icon" href="images/favicon.ico">
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/slider.css">
+		<style>
+			#counter {
+				width: 1150px;
+				height: 600px;
+				position: relative;
+				overflow: hidden;
+			}
+
+			#list {
+				width: 3600px;
+				height: 500px;
+				position: absolute;
+				z-index: 1;
+			}
+
+			#list img {
+				margin-top: 50px;
+				width: 1150px;
+				height: 600px;
+				float: left;
+			}
+
+			.arrow {
+				position: absolute;
+				top: 110px;
+				text-decoration: none;
+				z-index: 2;
+				display: none;
+				width: 40px;
+				height: 40px;
+				font-size: 36px;
+				font-weight: bold;
+				line-height: 39px;
+				text-align: center;
+				color: #fff;
+				background-color: rgba(0, 0, 0, 1);
+				cursor: pointer;
+			}
+
+			.arrow:hover {
+				background-color: rgba(0, 0, 0, 0.8);
+			}
+
+			#counter:hover .arrow {
+				display: block;
+			}
+
+			#pre {
+				left: 20px;
+			}
+
+			#next {
+				right: 20px;
+			}
+
+			#list {
+				transition: left 1s;
+			}
+
+			.list {
+				transition: left 0.1s;
+			}
+
+			#buttons {
+				position: absolute;
+				height: 10px;
+				width: 120px;
+				left: 250px;
+				bottom: 20px;
+				z-index: 2;
+			}
+
+			#buttons span {
+				border: 1px solid #FFFFFF;
+				border-radius: 5px;
+				float: left;
+				width: 10px;
+				height: 10px;
+				background-color: #333;
+				margin-right: 5px;
+				cursor: pointer;
+			}
+
+			#buttons .on {
+				background: orangered;
+			}
+		</style>
+
+	</head>
+	<body class="page1">
+		<!--==============================header=================================-->
+		<header>
+			<div class="container_12">
+				<div class="grid_12">
+					<h1><a href="index.html">
+							<img src="images/logo.png" alt="Gerald Harris attorney at law"></a>
+					</h1>
+					<div class="clear"></div>
+				</div>
+				<div class="menu_block">
+					<nav class="">
+						<ul class="sf-menu">
+							<li class="current"><a href="index.html">首页</a></li>
+							<li class="with_ul"><a href="about.html">关于</a>
+								<ul>
+									<li><a href="#">新闻</a></li>
+									<li><a href="#">推荐</a></li>
+								</ul>
+							</li>
+							<li><a href="picture.html">图片</a></li>
+							<li><a href="delicacies.html">美食</a></li>
+							<li><a href="scenic.html">景区</a></li>
+							<li><a href="login.html">登录</a></li>
+						</ul>
+					</nav>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</header>
+
+		<div class="main">
+			<!--=======content================================-->
+
+			<div class="content">
+				<div class="container_12">
+					<div class="container_12">
+						<div id="counter">
+							<div id="list" style="left:0px;">
+								<!-- 设置初始偏移量为0px -->
+								<img src="images/slide1.jpg" alt="1">
+								<img src="images/slide2.jpg" alt="2">
+								<img src="images/slide3.jpg" alt="3">
+								<img src="images/slide2.jpg" alt="2">
+								<img src="images/slide3.jpg" alt="3">
+								<img src="images/slide3.jpg" alt="3">
+							</div>
+							<!-- 图片两边的左右点击切换图片按钮 -->
+							<a href="javascript:;" id="pre" class="arrow">&lt;</a>
+							<a href="javascript:;" id="next" class="arrow">&gt;</a>
+						</div>
+					</div>
+					<div class="grid_12">
+						<h3>热门景点</h3>
+					</div>
+					<div class="boxes">
+						<div class="grid_4">
+							<figure>
+								<div><img src="images/jd1.png" alt="" style="height: 350px;"></div>
+								<figcaption>
+									<h3>蓬莱阁</h3>
+									中国神话传说的仙岛“中国四大名楼之一”
+
+								</figcaption>
+							</figure>
+						</div>
+						<div class="grid_4">
+							<figure>
+								<div><img src="images/jd2.png" alt="" style="height: 350px;"></div>
+								<figcaption>
+									<h3>烟台山</h3>
+									看外国领事馆建筑群，了解烟台开埠文化
+								</figcaption>
+							</figure>
+						</div>
+						<div class="grid_4">
+							<figure>
+								<div><img src="images/jd3.png" alt="" style="height: 350px;"></div>
+								<figcaption>
+									<h3>金沙滩</h3>
+									很多现代艺术风格的雕像，这里的巨鲸已经成了烟台的一张明星片
+								</figcaption>
+							</figure>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="grid_8">
+						<div id="tabs">
+							<ul>
+								<li><a href="delicacies.html">美食推荐</a></li>
+							</ul>
+							<div class="clear"></div>
+							<div class="tab_cont" id="tabs-1">
+								<img src="images/ms1.png" style="width: 300px;height: 150px;">
+								<div class="extra_wrapper">
+									<div>生呛梭子蟹</div>
+									<p>
+										生呛梭子蟹，是一道山东烟台莱州的传统名菜。莱州湾盛产“三疣梭子蟹”，汛期一年分"麦黄蟹"和"豆黄蟹"两次。
+										秋天，先煮好腌蟹子用的汤水，冷却后，装进坛子里，再将活蟹子放入汤中，令其饱饮一腔，香味内浸。然后封坛20天，开坛即可食。
+										不过，渔民们多爱把这种美味放到大雪纷飞的时日，到那时开坛取蟹，鲜香之气，溢满一室。
+									</p>
+
+
+									<div class="clear "></div>
+
+								</div>
+								<div class="clear cl1"></div>
+								<img src="images/ms2.png" style="width: 300px;height: 150px;">
+								<div class="extra_wrapper">
+									<div>扒皮狼炖茼蒿</div>
+									扒皮狼炖茼蒿是烟台海阳十大名吃之一。扒皮狼是一种营养丰富的鱼类，它的蛋白质含量特别高，鱼肉细嫩，无腥味，鱼肉比较淡。
+									烟台是扒皮狼的主要产地之一，当地人一般都会用新鲜的扒皮狼鱼将皮剥掉和当季种植的茼蒿一起炖制，鱼肉软烂茼蒿
+									鲜绿，搭配起来可谓是汤鲜味美，尤其是入味后的鱼杂，更是一绝。
+									<div class="clear"></div>
+
+									<div class="clear "></div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="grid_4">
+						<div class="newsletter_title">文旅资讯</div>
+						<div class="n_container">
+							<li><a href="https://www.ytta.cn/information/1533038637342523392">惊喜福利！烟台冬游玩法又上新→</a></li>
+							<li><a href="https://www.ytta.cn/information/1532678274155544576">本周六，在烟免费看好戏！高层次人才福利→</a></li>
+
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="bottom_block">
+				<div class="container_12">
+					<div class="grid_2">
+						<h4>联系我:</h4>
+						TEL: 1-800-234-5678<br><a href="#">info@demolink.org</a>
+
+					</div>
+					<div class="grid_2">
+						<h4>地址:</h4>
+						烟台<br><a href="#">烟台</a>
+
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<!--==============================footer=================================-->
+
+		</div>
+
+		<script type="text/javascript">
+			var counter = document.getElementById("counter");
+			var list = document.getElementById("list");
+			var pre = document.getElementById("pre");
+			var next = document.getElementById("next");
+			var timer;
+
+			//html与js结合式书写 : 变量名.style.left=数值
+			var nextlist = parseInt(list.style.left); //接收偏移量的值
+
+			//偏移量的改变
+			function animals(offset) {
+				var newlist = parseInt(list.style.left) + offset; //定义参数随时传递新的偏移量值
+				list.style.left = newlist + 'px'; //偏移量需要单位‘像素px’，否则计算机识别不出，图片将不会移动位置
+				//到达最后一张时，点击右耳朵则返回到第一张
+				if (newlist < -3001) {
+					list.style.left = 0 + 'px';
+					list.setAttribute('class', 'list');
+				}
+				//在第一张时，点左耳朵则返回到最后一张
+				if (newlist > 0) {
+					list.style.left = -3000 + 'px';
+					list.setAttribute('class', 'list');
+				}
+			}
+			// 点击左右耳朵触发函数
+			pre.onclick = function() {
+				animals(1150) //点击左边耳朵，图片往左移一张，偏移量加600
+			}
+			next.onclick = function() {
+				animals(-1150) //点击右边耳朵，图片往右移一张，偏移量减600
+			}
+			// 开始定时器
+			function start() {
+				timer = setInterval(function() {
+					next.onclick()
+				}, 2000);
+			}
+			start();
+			// 关闭定时器
+			function stop() {
+				clearInterval(timer);
+			}
+			// 鼠标移出时,开始定时器
+			counter.onmouseleave = start;
+			// 鼠标移入时,关闭定时器
+			counter.onmouseenter = stop;
+		</script>
+	</body>
+</html>
